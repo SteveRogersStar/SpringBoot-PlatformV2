@@ -74,3 +74,8 @@ logging:
   level:
     com.ruoyi: debug
     org.springframework: warn
+
+#JWTToken 配置
+jwt:
+  secretKey: medicalSecretKey
+  issuer: 123456
