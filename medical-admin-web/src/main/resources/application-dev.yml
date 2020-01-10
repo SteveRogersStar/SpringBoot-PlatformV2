@@ -77,7 +77,5 @@ logging:
 
 #JWTToken 配置
 jwt:
-  secretKey: medicalSecretKey
-  issuer: 123456
-
-
+  secretKey: medicalSecretKey78
+  issuer: 12345678
