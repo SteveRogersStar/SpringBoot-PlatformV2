@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = SpringBootConfigurationApplicationTest.class)
-public class SpringBootConfigurationApplicationTest {
+@ContextConfiguration(classes = SpringBootJwtTokenUtilTest.class)
+public class SpringBootJwtTokenUtilTest {
 
     @Test
     public  void  testToken()
