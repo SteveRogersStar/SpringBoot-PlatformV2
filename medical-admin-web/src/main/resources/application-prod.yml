@@ -1,0 +1,83 @@
+## 项目参数
+project:
+  name: MedicalPlatform
+  description: 医讯网络开发平台
+  version: 1.0.0
+  copyrightYear: 2020
+  author:
+    name: heyu
+    url: http://www.lvcong.net
+    email: heyu998@qq.com
+###############################################################################
+
+###############################################################################
+## swagger配置
+swagger:
+  enable: true
+###############################################################################
+#spring:
+#  datasource:
+#    #?serverTimezone=UTC解决时区的报错
+#    url: jdbc:mysql://localhost:3306/myshop?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: 123456
+#    # MySQL 8.x: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#
+#    #Spring Boot 默认是不注入这些属性值的，需要自己绑定
+#    #druid 数据源专有配置
+#    initialSize: 5
+#    minIdle: 5
+#    maxActive: 20
+#    maxWait: 60000
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: SELECT 1 FROM DUAL
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#
+#    #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
+#    #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+#    #则导入 log4j 依赖即可，Maven 地址： https://mvnrepository.com/artifact/log4j/log4j
+#    filters: stat,wall,log4j
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    useGlobalDataSourceStat: true
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+server:
+  port:
+    # 服务器的HTTP端口，默认为80
+      port: 8080
+      servlet:
+        # 应用的访问路径
+        context-path: /
+      tomcat:
+        # tomcat的URI编码
+        uri-encoding: UTF-8
+        # tomcat最大线程数，默认为200
+        max-threads: 800
+        # Tomcat启动初始化的线程数，默认值25
+        min-spare-threads: 30
+# Spring配置
+spring:
+  #配置加载除了加载application.yml之外,还加载 application-druid.yml 文件
+  profiles:
+    active: druid
+mybatis:
+  type-aliases-package: com.medical.platform.entity
+  mapper-locations: classpath:mapper/*.xml
+# 日志配置
+logging:
+  level:
+    com.ruoyi: debug
+    org.springframework: warn
+
+#JWTToken 配置
+jwt:
+  secretKey: medicalSecretKey
+  issuer: 123456
+
+
