@@ -50,7 +50,7 @@ swagger:
 server:
   port:
     # 服务器的HTTP端口，默认为80
-      port: 8080
+      port: 8081
       servlet:
         # 应用的访问路径
         context-path: /
@@ -79,3 +79,7 @@ logging:
 jwt:
   secretKey: medicalSecretKey78
   issuer: 12345678
+
+#Url 过滤器过滤
+Open:
+  url: /api/*

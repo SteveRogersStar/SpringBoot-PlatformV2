@@ -80,4 +80,9 @@ jwt:
   secretKey: medicalSecretKey
   issuer: 123456
 
+#Url 过滤器过滤
+Open:
+  url: /api/*
+
+
 
